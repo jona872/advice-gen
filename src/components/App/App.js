@@ -13,7 +13,6 @@ function App() {
   async function getAdvice() {
     const res = await fetch("https://api.adviceslip.com/advice");
     const data = await res.json();
-    console.log("🚀 ~ file: App.js ~ line 19 ~ getAdvice ~ data", data.slip)
     setAdvice(data.slip);
   }
 
@@ -24,7 +23,7 @@ function App() {
       <picture>
         <source media="(max-width: 399px)" srcSet="/images/pattern-divider-mobile.svg" />
         <source media="(min-width: 400px)" srcSet="/images/pattern-divider-desktop.svg" />
-        <img id="divisor" src="/images/pattern-divider-desktop.svg" aria-hidden="true" alt="" />
+        <img id="divisor" src="/images/pattern-divider-mobile.svg" aria-hidden="true" alt="" />
       </picture>
 
       <div className="button-wrapper">
